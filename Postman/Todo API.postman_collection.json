@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "a28eb733-e95c-b30b-0d42-fac67fa8a8a6",
+		"name": "Todo API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET/todos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Auth",
+						"value": "{{authToken}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{apiUrl}}/todos",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET/todos/:id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Auth",
+						"value": "{{authToken}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{apiUrl}}/todos/1",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"todos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/todos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Auth",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"description\":\"hello2\",\n\t\"completed\": true\n}"
+				},
+				"url": {
+					"raw": "{{apiUrl}}/todos",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE/todos/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Auth",
+						"value": "{{authToken}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{apiUrl}}/todos/2",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"todos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT/todos/:id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Auth",
+						"value": "{{authToken}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{apiUrl}}/todos/1",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"todos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/users",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"a1@abc.com\",\n\t\"password\": \"1234567b\"\n}"
+				},
+				"url": {
+					"raw": "{{apiUrl}}/users",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/users/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"a1@abc.com\",\n\t\"password\": \"1234567b\"\n}"
+				},
+				"url": {
+					"raw": "{{apiUrl}}/users/login",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE/users/login",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Auth",
+						"value": "{{authToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"a1@abc.com\",\n\t\"password\": \"1234567b\"\n}"
+				},
+				"url": {
+					"raw": "{{apiUrl}}/users/login",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
